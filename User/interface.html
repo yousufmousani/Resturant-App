@@ -1,0 +1,354 @@
+<!-- ye first page ya yahan without signup user ayega -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+        #body{
+            background:linear-gradient(black,rgb(223, 180, 99));
+            /* background-color: black; */
+        }
+        .form-control{
+            margin-left:65px;
+          margin: auto;
+          width: 280px;
+          text-align: center;
+          /* margin-left: 430px; */
+          border: 1px solid black;
+         }
+        .nav-btn{
+          /* background:rgb(143, 204, 225); */
+          background:rgb(223, 180, 99);
+          color:black;
+          border-radius: 6px;
+          /* height: 36px; */
+          width: 40px;
+          border: 1px solid black;
+          height: 39px;
+          margin-top: 3px;
+        }
+        .navbar{
+          background-color:rgb(19, 17, 17);
+          position:fixed;
+          z-index: 1;
+          width: auto;
+        }
+        .nav-item{
+          width: 220px;
+          display: flex;
+          justify-content: center;
+          font-size: 20px;
+          text-align: justify;
+        }
+        .logout,.SIGNUP,.LOGIN{
+        background-color:rgb(223, 180, 99);
+        color: black;
+         display: inline-block;
+         border-radius: 10px;
+         height: 39px;
+         width: 120px;
+         margin-right:50px;
+        }
+        td{
+            width: 700px;
+            font-size:30px;
+            text-align: center;  
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration:underline;
+            
+        }
+        .nav-item:hover{
+            text-decoration:underline;
+        }
+        .alert{
+          background:black;
+          -webkit-text-fill-color: rgb(223, 180, 99);
+          box-shadow: 1px 1px 10px rgb(223, 180, 99);
+        }
+
+        
+    </style>
+</head>
+<body id="body">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" style="background-color:rgb(223, 180, 99);">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse design" id="navbarTogglerDemo01" >
+            <!-- <a class="navbar-brand" href="#">BUSINESS PRO</a> -->
+            <img src="data:image/jpeg;base64,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" alt="" width="70px">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 getul">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" style="color:rgb(223, 180, 99);">Home</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" href="#">Others</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-disabled="true" style="color:rgb(223, 180, 99);" id="product1">Product</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" style="color:rgb(223, 180, 99);">About</a>
+              </li>
+
+
+              
+              <form class="d-flex" role="search" style="margin-right:70px;">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="background-color: rgb(223, 180, 99);">
+                <button class="nav-btn" type="submit"> <i class="fa-sharp fa-solid fa-magnifying-glass fa-lg"></i></button>
+                
+              </form>
+              
+              <!-- <i class="fa-sharp fa-solid fa-magnifying-glass fa-lg"></i> -->
+              
+            </ul>
+            <button class="SIGNUP" id="logout-btn"><a href="./signup.html">SIGUNUP</a></button>
+            <button class="LOGIN" id="logout-btn"><a href="./login.html">LOGIN</a></button>
+            <!-- <button class="logout" id="logout-btn">Logout</button> -->
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br>
+      <h2 style="text-align: center; color:rgb(223, 180, 99);" class="wow animate__animated animate__bounceInLeft">WELCOME TO THE RESTURANT APP</h2>
+<br><br>
+<center>
+<img src="https://cdn-food.tribune.com.pk/gallery/ZMt4WPmYn0FlQEIIjRsBi51ZQbtnq5aa7bS7mXO4.jpeg" id="image" style="width:350px;height: 290px; border-radius: 30px;" class="wow animate__animated animate__fadeInLeft">
+<img src="https://pentagonfoodgroup.co.uk/blog/wp-content/uploads/2022/07/fast-food.jpg" id="image" style="width:350px;height: 290px; border-radius: 30px;" class="wow animate__animated animate__fadeInLeft">
+<img src="https://cdn.downtoearth.org.in/library/large/2019-03-05/0.89399200_1551782137_fast1.jpg" id="image" style="width:350px;height: 290px; border-radius: 30px;" class="wow animate__animated animate__fadeInLeft">
+<img src="https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg" id="image" style="width: 350px;height: 290px; border-radius: 30px;" class="wow animate__animated animate__fadeInLeft"><br><br><br>
+</center>
+<center>
+<table>
+<tr>
+    <td style="text-align: center; background: linear-gradient(rgb(40, 36, 36),rgb(103, 80, 34)); color: rgb(177, 142, 75); width: 1300px;" class="wow animate__animated animate__zoomIn"><strong>CHICKEN ITEMS</strong></td>
+</tr>
+</table>
+</center>
+<br>
+<center>
+<table class="wow animate__animated animate__bounceInLeft">
+    <tr style="background-color :rgb(80, 63, 32);
+    width: 1300px; color:rgb(177, 142, 75);">
+        <td><b>ITEMS</b></td>
+        <td><b>PRICE</b></td>
+    </tr>
+    <tr style="background-color :rgb(80, 63, 32);
+    width: 1300px;color:rgb(130, 107, 65);">
+        <td>CHICKEN BURGER</td>
+        <td>$10</td>
+        
+    </tr>
+    <tr style="background-color :rgb(80, 63, 32);
+    width: 1300px;color:rgb(130, 107, 65);">
+        <td>CHICKEN NUGGET</td>
+        <td>$07</td>
+    </tr>
+    <tr style="background-color :rgb(80, 63, 32);
+    width: 1300px;color:rgb(130, 107, 65);">
+        <td>CHICKEN KARAHI</td>
+        <td>$15</td>
+    </tr>
+    <tr style="background-color :rgb(80, 63, 32);
+    width: 1300px;color:rgb(130, 107, 65);">
+        <td>CHICKEN KORMA</td>
+        <td>$18</td>
+    </tr>
+    <tr style="background-color :rgb(80, 63, 32);
+    width: 1300px;color:rgb(130, 107, 65);">
+        <td>CHICKEN BROAST</td>
+        <td>$12</td>
+      </tr>
+      <br>
+      <table>
+        <br>
+        <tr>
+            <td style="text-align: center; background: linear-gradient(rgb(40, 36, 36),rgb(103, 80, 34)); color: rgb(177, 142, 75); width: 300px;" class=" wow animate__animated animate__bounceIn"><strong><a href="./signup.html" style="text-align: center; background: linear-gradient(rgb(40, 36, 36),rgb(103, 80, 34)); color: rgb(177, 142, 75); width: 300px;">GET STARTED</a></strong></td>
+        </tr>
+        </table>
+</table>
+ 
+</center>
+<!-- </div> -->
+<br><br>
+<center>
+    <div class="row-cols-4">
+<img src="https://cdn-food.tribune.com.pk/gallery/ZMt4WPmYn0FlQEIIjRsBi51ZQbtnq5aa7bS7mXO4.jpeg" id="image" style="width: 350px;height: 290px; border-radius: 30px;" class=" wow animate__animated animate__fadeInLeft">
+<img src="https://pentagonfoodgroup.co.uk/blog/wp-content/uploads/2022/07/fast-food.jpg" id="image" style="width: 350px;height: 290px; border-radius: 30px;" class="wow animate__animated animate__fadeInLeft">
+<img src="https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg" id="image" style="width: 350px;height: 290px; border-radius: 30px;" class="wow animate__animated animate__fadeInLeft">
+<img src="https://img.jakpost.net/c/2016/09/29/2016_09_29_12990_1475116504._large.jpg" id="image" style="width: 350px;height: 290px; border-radius: 30px;" class="wow animate__animated animate__fadeInLeft">
+</div>
+</center>
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="my-5">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-dark"
+            style=" background:black"
+            >
+      <!-- Section: Social media -->
+      <section
+               class="d-flex justify-content-between p-4 text-white"
+               style="background:black;"
+               >
+        <!-- Left -->
+        <div class="me-5" style="color:rgb(223, 180, 99);">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4" style="color:rgb(223, 180, 99);">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4" style="color:rgb(223, 180, 99);">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4" style="color:rgb(223, 180, 99);">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4" style="color:rgb(223, 180, 99);">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4" style="color:rgb(223, 180, 99);">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4" style="color:rgb(223, 180, 99);">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5" style="color:rgb(223, 180, 99);">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" >
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold">Company name</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" >
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Products</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!"style="color:rgb(223, 180, 99);">MDBootstrap</a>
+              </p>
+              <p>
+                <a href="#!"style="color:rgb(223, 180, 99);">MDWordPress</a>
+              </p>
+              <p>
+                <a href="#!"style="color:rgb(223, 180, 99);">BrandFlow</a>
+              </p>
+              <p>
+                <a href="#!"style="color:rgb(223, 180, 99);">Bootstrap Angular</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Useful links</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background-color: #7c4dff; height: 2px"
+                  />
+              <p>
+                <a href="#!"style="color:rgb(223, 180, 99);">Your Account</a>
+              </p>
+              <p>
+                <a href="#!"style="color:rgb(223, 180, 99);">Become an Affiliate</a>
+              </p>
+              <p>
+                <a href="#!"style="color:rgb(223, 180, 99);">Shipping Rates</a>
+              </p>
+              <p>
+                <a href="#!"style="color:rgb(223, 180, 99);">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"
+                  style="width: 60px; background:linear-gradient(black,rgb(223, 180, 99));"
+                  />
+              <!-- <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p> -->
+              <p><i class="fas fa-envelope mr-3"></i> &nbsp; yousufmousani786@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> +92 3149626995</p>
+              <!-- <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p> -->
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="color:rgb(223, 180, 99);"
+           >
+        © 2023 Copyright:
+        <a style="color:rgb(223, 180, 99);" href="https://github.com/yousufmousani"
+           >Yousuf Mousani</a
+          >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+<script type="module" src="interface.js"></script>
+</body>
+</html>

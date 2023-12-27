@@ -1,0 +1,174 @@
+<!-- ye user ka signup page ha -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+        <title>Signup Form</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <style>
+            *{
+                margin: 10px;
+                padding: 10px;
+            }
+    
+            body{
+                margin: 20px;
+                /* margin-left: 600px; */
+                display: flex;
+                justify-content: center;
+                /* background:linear-gradient(rgb(25, 25, 178),rgb(4, 62, 81)); */
+            /* margin-left: 100px; */
+                /* padding: 0; */
+                background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+            }
+    
+            .container{
+                border-radius: 10px;
+                width: 390px;
+                height: 560px;
+                margin-top: 30px;
+                text-align: center;
+                background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+                border: 1px solid black;
+                box-shadow: 10px 1px 30px rgb(122, 103, 27);
+    
+            }
+    h2{
+        text-align: center;
+    }
+    
+    /* button{
+        display: inline-block;
+        border-radius: 10px;
+        width: 120px;
+        background: linear-gradient(blue,rgb(4, 62, 81));
+        color: white;
+        font-size: medium;
+        font-family:sans-serif;
+        
+    } */
+    
+    #button{
+        display: inline-block;
+        border-radius: 10px;
+        width: 375px;
+        background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+        -webkit-text-fill-color:black;
+        display: flex;
+        justify-content: center;
+        margin-left: -10px;
+    }
+    
+    #email,#password,#username{
+        width: 350px;
+        height: 25px;
+        /* border-radius: 10px; */
+        font-size: 15px;
+        margin-left: -9px;
+        margin-top: 20px;
+        background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+        -webkit-text-fill-color:black;
+        
+        
+    }
+    a{
+        margin-right:220px;
+        text-decoration: none;
+        color: black;
+    }
+    /* h4{
+        width: 200px;
+        display: inline-block;
+    } */
+    h3{
+        width:570px;
+    }
+    i{
+        margin-top: -20px;
+        color: rgb(239, 191, 103);
+        /* height: 20px; */
+        /* padding: 12px;
+        width:30px;  */
+    }
+    
+    #gbutton{
+        width: 375px;
+        height: 40px;
+        background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+        -webkit-text-fill-color:black;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+    
+    @media screen and (max-width: 400px ) {
+      .container {
+        margin-top:25px;
+        width: 350px;
+        height:500px;
+    
+      }
+    }
+    
+    @media screen and (max-width: 400px ) {
+      #username,#email,#password{
+        padding: 0px;
+        margin-top:20px;
+        width: 330px;
+        height: 40px;
+      }
+    }
+    @media screen and (max-width: 400px ) {
+      #button{
+        margin-left: -10px;
+        width: 330px;
+      }
+    }
+    
+    @media screen and (max-width: 400px ) {
+      #gbutton{
+        margin-left: 10px;
+        width: 330px
+      }
+    }
+    @media screen and (max-width: 400px ) {
+      a{
+        margin-right: 250px;
+      }
+    }
+    
+    
+    
+        </style>
+    </head>
+    <body>
+        <div class="container animate__animated animate__zoomInDown">
+        <h2>SignUp Form</h2>
+    
+        <!-- <button>SingUp</button><button>Login</button>
+        <br><br> -->
+        <form id="form">
+        <input type="text" placeholder="Enter Name" id="username" class="container animate__animated animate__fadeIn">
+        <br>
+        <input type="text" placeholder="Enter Email Address" id="email" class="container animate__animated animate__fadeIn">
+        <br>
+        <input type="password" placeholder="Enter Password" id="password" class="container animate__animated animate__fadeIn">
+        <br><br>
+        <!-- <a href="#">Forgot Password?</a> -->
+        <button id="button" >Login</button>
+        
+    </form>
+    <button id="gbutton"><i class="fa-brands fa-google fa-xl" id="google"></i>Login With Google</button>
+    <!-- <i class="fa-brands fa-facebook fa-xl"></i>
+    <i class="fa-brands fa-github fa-xl"></i>
+    <i class="fa-brands fa-twitter fa-xl"></i> -->
+    
+        <h3>Already have your Account<a href="./login.html" id="h4">Login</a></h3>
+        
+    </div>
+    <script type="module" src="signup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,173 @@
+<!-- ye admin ka signup page ha -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <style>
+            *{
+                margin: 10px;
+                padding: 10px;
+            }
+    
+            body{
+                margin: 20px;
+                /* margin-left: 600px; */
+                display: flex;
+                justify-content: center;
+                /* background:linear-gradient(rgb(25, 25, 178),rgb(4, 62, 81)); */
+            /* margin-left: 100px; */
+                /* padding: 0; */
+                background-color: black;
+            }
+    
+            .container{
+                border-radius: 10px;
+                width: 390px;
+                height: 560px;
+                margin-top: 30px;
+                text-align: center;
+                background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+                border: 1px solid black;
+                color: rgb(239, 191, 103);
+                box-shadow: 5px 10px 370px rgb(122, 103, 27);
+    
+            }
+    h2{
+        text-align: center;
+    }
+    
+    /* button{
+        display: inline-block;
+        border-radius: 10px;
+        width: 120px;
+        background: linear-gradient(blue,rgb(4, 62, 81));
+        color: white;
+        font-size: medium;
+        font-family:sans-serif;
+        
+    } */
+    
+    #button{
+        display: inline-block;
+        border-radius: 8px;
+        width: 380px;
+        background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+        color: rgb(239, 191, 103);
+        text-shadow: 3px 3px 3px rgb(33, 30, 30);
+        display: flex;
+        justify-content: center;
+        margin-left: -14px;
+    }
+    
+    #email,#password,#username{
+        width: 350px;
+        height: 25px;
+        /* border-radius: 10px; */
+        font-size: 15px;
+        margin-left: -9px;
+        margin-top: 20px;
+        background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+        
+        
+    }
+    a{
+        margin-right:200px;
+        text-decoration: none;
+       color: black;
+    }
+    /* h4{
+        width: 200px;
+        display: inline-block;
+    } */
+    h3{
+        width:570px;
+        color: black;
+    }
+    i{
+        margin-top: -20px;
+        color: rgb(239, 191, 103);
+        /* height: 20px; */
+        /* padding: 12px;
+        width:30px;  */
+    }
+    
+    #gbutton{
+        width: 380px;
+        height: 40px;
+        background:linear-gradient(rgb(122, 103, 27),rgb(196, 146, 55));
+        color: rgb(239, 191, 103);
+        text-shadow: 3px 3px 3px rgb(33, 30, 30);
+        border-radius: 8px;
+        margin-left: 4px;
+    }
+    
+    @media screen and (max-width: 400px ) {
+      .container {
+        padding: 0px;
+        margin-top:25px;
+        width: 350px;
+        height:600px;
+      }
+    }
+    
+    @media screen and (max-width: 400px ) {
+      #username,#email,#password{
+        padding: 0px;
+        margin-top:25px;
+        width: 330px;
+        height: 40px;
+      }
+    }
+    @media screen and (max-width: 400px ) {
+      #button{
+        margin-left: -10px;
+        width: 330px
+      }
+    }
+    
+    @media screen and (max-width: 400px ) {
+      #gbutton{
+        margin-left: 10px;
+        width: 330px
+      }
+    }
+    
+    
+    
+    
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h2>Admin Signup</h2>
+    
+        <!-- <button>SingUp</button><button>Login</button>
+        <br><br> -->
+        <form id="form">
+        <input type="text" placeholder="User Name" id="username">
+        <br>
+        <input type="text" placeholder="Email Address" id="email">
+        <br>
+        <input type="password" placeholder="Password" id="password">
+        <br><br>
+        <a href="#">Forgot Password?</a>
+        <br><br>
+        <button id="button">Login</button>
+        
+    </form>
+    <button id="gbutton"><i class="fa-brands fa-google fa-xl" id="google"></i>Login With Google</button>
+    <!-- <i class="fa-brands fa-facebook fa-xl"></i>
+    <i class="fa-brands fa-github fa-xl"></i>
+    <i class="fa-brands fa-twitter fa-xl"></i> -->
+    
+        <h3>Already have your Account<a href="adminlogin.html" id="h4">Login</a></h3>
+        
+    </div>
+    <script type="module" src="admin.js"></script>
+    </body>
+</html>
